@@ -7,13 +7,11 @@
         "./*"
       ]
     },
-    "resolveJsonModule": true,   // Enable importing JSON files as modules
-    "esModuleInterop": true      // Ensure compatibility with non-ESM modules
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": [
     "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "**/*.tsx"
   ]
 }
