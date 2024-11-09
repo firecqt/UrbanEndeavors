@@ -6,7 +6,9 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "resolveJsonModule": true,   // Enable importing JSON files as modules
+    "esModuleInterop": true      // Ensure compatibility with non-ESM modules
   },
   "include": [
     "**/*.ts",
