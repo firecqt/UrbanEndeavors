@@ -1,12 +1,22 @@
 import React from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
-import HomeScreen from './app/HomeScreen'; // Import the HomeScreen component
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './app/HomeScreen';
+
+export type RootStackParamList = {
+  Home: undefined;
+  Profile: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar barStyle="dark-content"/>
-      <HomeScreen /> {/* Render the HomeScreen component */}
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Profile" component={Profile} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }

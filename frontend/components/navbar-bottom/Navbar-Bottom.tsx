@@ -1,19 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 
 const NavbarBottom: React.FC = () => {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Hello</Text>
+  
+
       </View>
     );
   };
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      flex: 0.10,
       width: '100%',  // Full width for the container
-      height: '20%',
     },
 });
 

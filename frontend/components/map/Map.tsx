@@ -19,7 +19,6 @@ const Map: React.FC = () => {
       >
         <Marker coordinate={{ latitude: 37.78825, longitude: -122.4324 }} title="Marker" description="This is a marker" />
       </MapView>
-      <Text style={styles.text}>Hello</Text>
     </View>
   );
 };

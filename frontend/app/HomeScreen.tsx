@@ -1,18 +1,20 @@
-// HomeScreen.tsx
 import React from 'react';
-import { View, Text, Button, StyleSheet, Alert } from 'react-native';
+import { View, Button, StyleSheet } from 'react-native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from "../App"; // Use named import for types
+import Map from '@/components/map/Map';
+import NavbarBottom from '@/components/navbar-bottom/Navbar-Bottom';
 
-// Function component with TypeScript syntax
+type HomeScreenProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
+
 const HomeScreen: React.FC = () => {
-  // Function to handle button press
-  const handlePress = () => {
-    Alert.alert('Hello!', 'You pressed the button.');
-  };
+  const navigation = useNavigation<HomeScreenProp>();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Your App</Text>
-      <Button title="Press Me" onPress={handlePress} />
+      <Map></Map>
+      <NavbarBottom></NavbarBottom>
     </View>
   );
 };
@@ -22,12 +24,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
   },
 });
 
