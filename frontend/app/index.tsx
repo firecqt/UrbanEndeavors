@@ -5,6 +5,7 @@ import { expo } from '../app.json'; // Import expo object from app.json
 import { Text, View } from "react-native";
 import HomeScreen from './HomeScreen';
 import Map from '@/components/map/Map';
+import NavbarBottom from '@/components/navbar-bottom/Navbar-Bottom';
 
 const appName = expo.name; // Access the name property
 
@@ -21,6 +22,7 @@ export default function Index() {
       }}
     >
       <Map></Map>
+      <NavbarBottom></NavbarBottom>
     </View>
   );
 }
